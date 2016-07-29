@@ -12,6 +12,15 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
+    browsers: ['Chrome', 'ChromeCanary'],
+
+    customLaunchers: {
+        // chrome setup for travis CI using chromium
+        Chrome_travis_ci: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+        }
+    },
 
     // list of files / patterns to load in the browser
     files: [
@@ -62,5 +71,10 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false
-  })
+  });
+
+  if(process.env.TRAVIS){
+      config.browsers = ['Chrome_travis_ci'];
+  }
+
 }
