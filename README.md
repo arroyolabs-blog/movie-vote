@@ -12,4 +12,6 @@ Quick demo JS class and HTML to explore karma and Travis CI
 
 I added a Travis CI instance to make sure this gets auto-built
 
+[![Build Status](https://travis-ci.org/saarmstrong/movie-vote.svg?branch=master)](https://travis-ci.org/saarmstrong/movie-vote)
+
 https://travis-ci.org/saarmstrong/movie-vote
