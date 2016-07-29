@@ -12,10 +12,10 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
+    // Config values to allow TravisCI to run chrome in it's container
     browsers: ['Chrome', 'ChromeCanary'],
-
     customLaunchers: {
-        // chrome setup for travis CI using chromium
+        // tell TravisCI to use chromium when testing
         Chrome_travis_ci: {
             base: 'Chrome',
             flags: ['--no-sandbox']
@@ -73,6 +73,7 @@ module.exports = function(config) {
     singleRun: false
   });
 
+  // Detect if this is TravisCI running the tests and tell it to use chromium
   if(process.env.TRAVIS){
       config.browsers = ['Chrome_travis_ci'];
   }
