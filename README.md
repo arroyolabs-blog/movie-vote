@@ -1,6 +1,6 @@
 # Movie Vote
 
-[![Build Status](https://travis-ci.org/saarmstrong/movie-vote.svg?branch=master)](https://travis-ci.org/saarmstrong/movie-vote)
+[![Build Status](https://travis-ci.org/arroyolabs-blog/movie-vote.svg?branch=master)](https://travis-ci.org/saarmstrong/movie-vote)
 
 Quick demo JS class and HTML to explore karma and Travis CI based heavily on Brad Braithwaite's [karma-seed example](https://github.com/bbraithwaite/karma-seed).
 
